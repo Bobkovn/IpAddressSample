@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Address Ip</string>
+
+    <!-- Common -->
+    <string name="no_connection_message">Нет подключения к сети!</string>
+    <string name="network_error_message">Ошибка сети!</string>
+    <string name="something_went_wrong">Что-то пошло не так!</string>
+
+    <string name="get_data">Получить данные</string>
+    <string name="error_ip">Некорректный IP Адрес</string>
+    <string name="ip_address">IP Адрес</string>
+</resources>
