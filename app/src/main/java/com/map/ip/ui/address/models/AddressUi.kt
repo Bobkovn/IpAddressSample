@@ -1,7 +1,7 @@
-package com.map.ip.main.models
+package com.map.ip.ui.address.models
 
 
-data class IpAddressUi(
+data class AddressUi(
     val country: String,
     val regionName: String,
     val city: String,

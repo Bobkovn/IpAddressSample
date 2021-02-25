@@ -11,7 +11,7 @@ import androidx.fragment.app.createViewModelLazy
 import androidx.lifecycle.ViewModel
 import com.google.android.material.appbar.MaterialToolbar
 import com.map.ip.common.MainActivity
-import com.map.ip.common.data.base.BaseError
+import com.map.ip.common.data.BaseError
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi

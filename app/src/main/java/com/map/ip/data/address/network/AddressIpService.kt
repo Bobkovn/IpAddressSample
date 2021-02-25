@@ -1,6 +1,6 @@
-package com.map.ip.common.data.mapip.network
+package com.map.ip.data.address.network
 
-import com.map.ip.common.data.mapip.model.*
+import com.map.ip.data.address.model.*
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -11,5 +11,4 @@ interface AddressIpService {
 
     @GET("$JSON_PATH{ip}")
     fun getAddressByIp(@Path("ip") ip: String): Call<IpAddress>
-
 }

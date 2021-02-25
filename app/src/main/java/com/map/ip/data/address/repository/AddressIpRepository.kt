@@ -1,7 +1,7 @@
-package com.map.ip.common.data.mapip.repository
+package com.map.ip.data.address.repository
 
-import com.map.ip.common.data.base.Result
-import com.map.ip.common.data.mapip.model.IpAddress
+import com.map.ip.common.data.Result
+import com.map.ip.data.address.model.IpAddress
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.Flow

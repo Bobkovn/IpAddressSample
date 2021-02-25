@@ -1,6 +1,6 @@
-package com.map.ip.common.data.base
+package com.map.ip.common.data
 
-import com.map.ip.common.data.base.HttpStatusCode.CODE_UNAUTHORIZED
+import com.map.ip.common.data.HttpStatusCode.CODE_UNAUTHORIZED
 import okhttp3.ResponseBody
 import org.json.JSONObject
 import retrofit2.HttpException

@@ -1,4 +1,4 @@
-package com.map.ip.common.data.mapip.network
+package com.map.ip.data.address.network
 
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

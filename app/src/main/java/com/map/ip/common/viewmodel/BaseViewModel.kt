@@ -4,9 +4,9 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.observe
-import com.map.ip.common.data.base.BaseError
-import com.map.ip.common.data.base.NetworkError
-import com.map.ip.common.data.base.Result
+import com.map.ip.common.data.BaseError
+import com.map.ip.common.data.NetworkError
+import com.map.ip.common.data.Result
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

@@ -1,12 +1,12 @@
-package com.map.ip.main.viewmodel
+package com.map.ip.ui.address.viewmodel
 
 import android.app.Application
 import android.util.Patterns
 import androidx.lifecycle.viewModelScope
-import com.map.ip.common.usecase.AddressIpUseCase
+import com.map.ip.usecase.address.AddressUseCase
 import com.map.ip.common.viewmodel.BaseStateViewModel
-import com.map.ip.main.IpAddressNavigation
-import com.map.ip.main.IpAddressViewState
+import com.map.ip.ui.address.AddressNavigation
+import com.map.ip.ui.address.AddressViewState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -19,10 +19,10 @@ import javax.inject.Inject
 @InternalCoroutinesApi
 @ExperimentalCoroutinesApi
 @HiltViewModel
-class IpAddressViewModel @Inject constructor(
+class AddressViewModel @Inject constructor(
     application: Application,
-    private val addressUseCase: AddressIpUseCase
-) : BaseStateViewModel<IpAddressViewState, IpAddressNavigation>(application) {
+    private val addressUseCase: AddressUseCase
+) : BaseStateViewModel<AddressViewState, AddressNavigation>(application) {
 
     fun fetchAddressByIp(ip: String) {
         if (validateIpAddress(ip)) {
@@ -31,12 +31,12 @@ class IpAddressViewModel @Inject constructor(
                 addressUseCase.fetchAddressByIp(ip).collect {
                     handleResult(it,
                         onSuccess = { result ->
-                            postViewState(IpAddressViewState.Address(result!!))
+                            postViewState(AddressViewState.Address(result!!))
                         })
                 }
             }
         } else {
-            postViewState(IpAddressViewState.IpValidationError)
+            postViewState(AddressViewState.IpValidationError)
         }
     }
 

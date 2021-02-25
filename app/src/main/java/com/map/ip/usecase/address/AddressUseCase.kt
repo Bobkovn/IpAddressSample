@@ -1,15 +1,16 @@
-package com.map.ip.common.usecase
+package com.map.ip.usecase.address
 
-import com.map.ip.common.data.mapip.model.IpAddress
-import com.map.ip.common.data.mapip.repository.AddressIpRepository
-import com.map.ip.main.models.IpAddressUi
+import com.map.ip.data.address.model.IpAddress
+import com.map.ip.data.address.repository.AddressIpRepository
+import com.map.ip.common.usecase.BaseUseCase
+import com.map.ip.ui.address.models.AddressUi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
 import javax.inject.Inject
 
 @ExperimentalCoroutinesApi
 @InternalCoroutinesApi
-class AddressIpUseCase @Inject constructor(private val repository: AddressIpRepository) : BaseUseCase() {
+class AddressUseCase @Inject constructor(private val repository: AddressIpRepository) : BaseUseCase() {
 
     suspend fun fetchAddressByIp(ip: String) =
         repository.getAddressByIp(ip).mapResult { result ->
@@ -17,7 +18,7 @@ class AddressIpUseCase @Inject constructor(private val repository: AddressIpRepo
         }
 
     private fun mapAddressUi(address: IpAddress) = address.let {
-        IpAddressUi(
+        AddressUi(
             it.country,
             it.regionName,
             it.city,

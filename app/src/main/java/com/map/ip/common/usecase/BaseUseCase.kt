@@ -1,7 +1,7 @@
 package com.map.ip.common.usecase
 
-import com.map.ip.common.data.base.NetworkError
-import com.map.ip.common.data.base.Result
+import com.map.ip.common.data.NetworkError
+import com.map.ip.common.data.Result
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

@@ -1,9 +1,9 @@
-package com.map.ip.common.data.mapip.network
+package com.map.ip.data.address.network
 
 
-import com.map.ip.common.data.base.BaseNetworkDataSource
-import com.map.ip.common.data.base.ConnectivityState
-import com.map.ip.common.data.base.NetworkErrorMapper
+import com.map.ip.common.data.BaseNetworkDataSource
+import com.map.ip.common.data.ConnectivityState
+import com.map.ip.common.data.NetworkErrorMapper
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import javax.inject.Inject
 

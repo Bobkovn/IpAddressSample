@@ -1,4 +1,4 @@
-package com.map.ip.common.data.base
+package com.map.ip.common.data
 
 const val ERROR_UNAUTHORIZED = "Unauthorized"
 private const val ERROR_BAD_REQUEST = "BadRequest"

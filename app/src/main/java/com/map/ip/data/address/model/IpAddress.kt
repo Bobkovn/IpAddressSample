@@ -1,4 +1,4 @@
-package com.map.ip.common.data.mapip.model
+package com.map.ip.data.address.model
 
 import com.google.gson.annotations.SerializedName
 

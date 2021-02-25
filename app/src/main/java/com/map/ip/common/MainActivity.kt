@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.navigation.findNavController
 import com.map.ip.R
-import com.map.ip.common.data.base.BaseError
-import com.map.ip.common.data.base.NetworkError
+import com.map.ip.common.data.BaseError
+import com.map.ip.common.data.NetworkError
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi

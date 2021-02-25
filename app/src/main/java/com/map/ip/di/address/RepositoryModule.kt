@@ -1,7 +1,7 @@
-package com.map.ip.common.di
+package com.map.ip.di.address
 
-import com.map.ip.common.data.mapip.repository.AddressIpRepository
-import com.map.ip.common.data.mapip.repository.AddressIpRepositoryImpl
+import com.map.ip.data.address.repository.AddressIpRepository
+import com.map.ip.data.address.repository.AddressIpRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.map.ip.common.data.base
+package com.map.ip.common.data
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
