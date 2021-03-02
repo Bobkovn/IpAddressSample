@@ -3,7 +3,7 @@ package com.map.ip.ui.address.viewmodel
 import android.app.Application
 import android.util.Patterns
 import androidx.lifecycle.viewModelScope
-import com.map.ip.usecase.address.AddressUseCase
+import com.map.ip.usecase.address.AddressIpUseCase
 import com.map.ip.common.viewmodel.BaseStateViewModel
 import com.map.ip.ui.address.AddressNavigation
 import com.map.ip.ui.address.AddressViewState
@@ -21,14 +21,14 @@ import javax.inject.Inject
 @HiltViewModel
 class AddressViewModel @Inject constructor(
     application: Application,
-    private val addressUseCase: AddressUseCase
+    private val addressIpUseCase: AddressIpUseCase
 ) : BaseStateViewModel<AddressViewState, AddressNavigation>(application) {
 
     fun fetchAddressByIp(ip: String) {
         if (validateIpAddress(ip)) {
             viewModelScope.launch(IO) {
                 postProgressState()
-                addressUseCase.fetchAddressByIp(ip).collect {
+                addressIpUseCase.execute(ip).collect {
                     handleResult(it,
                         onSuccess = { result ->
                             postViewState(AddressViewState.Address(result!!))

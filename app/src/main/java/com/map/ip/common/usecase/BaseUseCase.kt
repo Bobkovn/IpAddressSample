@@ -5,7 +5,9 @@ import com.map.ip.common.data.Result
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-abstract class BaseUseCase {
+abstract class BaseUseCase<T, R> {
+
+    abstract suspend fun execute(data: T): Flow<Result<R>>
 
     fun <T, R> Flow<Result<T>>.mapResult(
         resultMapper: (T) -> R
